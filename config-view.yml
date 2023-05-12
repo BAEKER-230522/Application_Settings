@@ -9,4 +9,4 @@ jasypt:
     bean: jasyptStringEncryptor
 
 custom:
-  con: connection !
+  con: connection success!
