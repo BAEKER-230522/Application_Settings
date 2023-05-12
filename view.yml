@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    default: dev
+  mvc:
+    hidden-method:
+      filter:
+        enabled: true
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
