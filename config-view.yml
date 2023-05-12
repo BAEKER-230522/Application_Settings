@@ -8,5 +8,5 @@ jasypt:
   encryptor:
     bean: jasyptStringEncryptor
 
-baeker:
-  value: it is test
+custom:
+  con: connection success!
