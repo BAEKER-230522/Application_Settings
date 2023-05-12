@@ -9,3 +9,6 @@ spring:
 jasypt:
   encryptor:
     bean: jasyptStringEncryptor
+
+baeker:
+  value: it is test
