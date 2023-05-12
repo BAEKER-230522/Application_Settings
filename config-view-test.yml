@@ -22,3 +22,5 @@ scheduler:
     member: "* * * * * *"
     study: "* * * * * *"
 
+custom:
+  con: connection success!
