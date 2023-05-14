@@ -58,3 +58,6 @@ logging.level:
 jasypt:
   encryptor:
     bean: jasyptStringEncryptor
+
+custom:
+  con: connection success!
