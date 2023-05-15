@@ -10,26 +10,6 @@ spring:
     username: ENC(MrlF9UZUaHufCgWLRE3ipQ==)
     password: ENC(dhw6nRBS+50xHhqPVFnZdw==)
 
-  security:
-    oauth2:
-      client:
-        registration:
-
-          kakao:
-            clientId: ENC(v3HCSehY14ighRx423yYdd0c+9lPu14JXCBJBcMLKDcZWKRPmCyo5xlYrh9lmr4B)
-            scope: friends, talk_message, account_email, profile_nickname, profile_image
-            client-name: Kakao
-            authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
-            client-authentication-method: POST
-            
-        provider:
-          kakao:
-            authorization-uri: https://kauth.kakao.com/oauth/authorize
-            token-uri: https://kauth.kakao.com/oauth/token
-            user-info-uri: https://kapi.kakao.com/v2/user/me
-            user-name-attribute: id
-
   jpa:
     hibernate:
       ddl-auto: create
