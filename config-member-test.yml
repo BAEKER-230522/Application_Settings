@@ -7,3 +7,6 @@ spring:
 jasypt:
   encryptor:
     bean: jasyptStringEncryptor
+
+custom:
+  con: connection success!
