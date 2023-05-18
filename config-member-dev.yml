@@ -27,5 +27,9 @@ jasypt:
   encryptor:
     bean: jasyptStringEncryptor
 
+springdoc:
+  swagger-ui:
+    path: /swger-ui.html
+
 custom:
   con: connection success!
