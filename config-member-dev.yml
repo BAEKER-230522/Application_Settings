@@ -27,13 +27,5 @@ jasypt:
   encryptor:
     bean: jasyptStringEncryptor
 
-springdoc:
-  api-docs:
-    path: /docs # 접속 path 설정
-
-  swagger-ui:
-    path: /swagger-ui # 접속 path 설정
-    display-request-duration: true
-
 custom:
   con: connection success!
