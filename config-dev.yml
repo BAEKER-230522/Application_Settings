@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: ENC(F6rrZURLqsfikLJlJiVgzbV1m7jq062OlSOZXF5jArk=)
+    bootstrap-servers: localhost:9092
     consumer:
       group-id: baeker
       auto-offset-reset: earliest
