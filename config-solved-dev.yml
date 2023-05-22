@@ -1,4 +1,9 @@
 spring:
+  batch:
+    job:
+      name: ${job.name:NONE}
+    jdbc:
+      initialize-schema: always
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
@@ -11,13 +16,11 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       linger:
         ms: 10
-  
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/baeker_park?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://127.0.0.1:3306/solved_table?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
     username: root
     password: 1234
-
   security:
     oauth2:
       client:
@@ -29,14 +32,12 @@ spring:
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8080/login/oauth2/code/kakao
             client-authentication-method: POST
-
         provider:
           kakao:
             authorization-uri: https://kauth.kakao.com/oauth/authorize
             token-uri: https://kauth.kakao.com/oauth/token
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id
-
   jpa:
     hibernate:
       ddl-auto: create
@@ -56,3 +57,15 @@ jasypt:
 
 custom:
   con: connection success!
+
+
+
+message:
+  topic:
+    name: "solved"
+
+
+scheduler:
+  cron:
+    member: "0 */3 * * * *"
+    study: "0 */5 * * * *"
