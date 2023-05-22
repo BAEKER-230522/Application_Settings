@@ -9,3 +9,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+
+custom:
+  con: prod connection success!
