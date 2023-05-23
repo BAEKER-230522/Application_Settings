@@ -14,7 +14,7 @@ spring:
             scope: friends, talk_message, account_email, profile_nickname, profile_image
             client-name: Kakao
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
+            redirect-uri: https://www.baeker.1ll.ca//login/oauth2/code/kakao
             client-authentication-method: POST
 
         provider:
@@ -29,4 +29,4 @@ jasypt:
     bean: jasyptStringEncryptor
 
 custom:
-  con: connection success!
+  con: prod connection success!
