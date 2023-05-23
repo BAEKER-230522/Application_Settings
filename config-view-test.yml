@@ -37,10 +37,5 @@ jasypt:
   encryptor:
     bean: jasyptStringEncryptor
 
-scheduler:
-  cron:
-    member: "* * * * * *"
-    study: "* * * * * *"
-
 custom:
   con: connection success!
