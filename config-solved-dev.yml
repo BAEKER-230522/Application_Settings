@@ -45,10 +45,12 @@ custom:
 
 message:
   topic:
-    name: "solved"
+    solved-member: "solved-member"
 
 
 scheduler:
   cron:
     member: "0 */3 * * * *"
     study: "0 */5 * * * *"
+
+
