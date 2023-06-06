@@ -1,0 +1,41 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: baeker
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      linger:
+        ms: 10
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(L4aT4GfkEsf36RsmLcicmZmhfwgA7o3VTkq0GMSRBorX3d++tPdam9QXDcnR99LE+6YH3dImFev/dHPxJ1+l9++i2B8cg6IHw3Y508pY/zARtnynx6yle453gCfUJkYAzBH2kEtzTeB7cyEvXiXqUIkVgOevG6NMOk3Eth8Kroib8xkHWpFNOOWnSt72b7dC)
+    username: ENC(plDde76MscNwKMt9v4A6Rw==)
+    password: ENC(OH+qshDPtFh1h1gDdWExzz/t0BlOzVbo)
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+logging.level:
+  org.hibernate:
+    SQL: debug
+    orm.jdbc.bind: trace
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
+
+
+message:
+  topic:
+    name: "rule"
